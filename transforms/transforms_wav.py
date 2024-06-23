@@ -20,18 +20,18 @@ def should_apply_transform(prob=0.5):
 class LoadAudio(object):
     """Loads an audio into a numpy array."""
 
-    def __init__(self, sample_rate=16000):
+    def __init__(self, sample_rate=8000):
         self.sample_rate = sample_rate
 
     def __call__(self, data):
         path = data['path']
         if path:
             samples, sample_rate = librosa.load(path, self.sample_rate)
-            if sample_rate != 8000:
-                print("!!!!!!!!!!!!!!")
-                samples = librosa.resample(samples, sample_rate, 8000) 
-                samples *= 0.4
-                sample_rate = 8000
+            # if sample_rate != 8000:
+            #     print("!!!!!!!!!!!!!!")
+            #     samples = librosa.resample(samples, sample_rate, 8000) 
+            #     samples *= 0.4
+            #     sample_rate = 8000
 
         else:
             # silence
