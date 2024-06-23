@@ -1,0 +1,7 @@
+shiyun_v1      向晴原始数据训练
+shiyun_v2_add_common_voice  增加了转录common_voice 
+shiyun_v3      对齐训练数据，用小爱模型的训练数据（0,2,3,4类）加视云数据训练，验证集也做同样操作
+shiyun_v4      增加老人转录数据集
+shiyun_v5      增加pcen数据增强
+shiyun_v6      使用仓库原始特征提取参数
+shiyun_v7      去掉老人数据

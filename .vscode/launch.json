@@ -1,0 +1,246 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+
+            // train
+
+            // "args": [
+            //     "--train-dataset",
+
+            //     // "datasets/speech_commands/valid",
+            //     // "/dataset/audio/audio_command/task1_lns/train_yourTTS",
+            //     // "/dataset/audio/audio_command/task1_lns/train_mix_2_normsound",
+            //     // "/dataset/audio/audio_command/task1_lns/train_collection_zhuanlu_normsound",
+            //     // "/dataset/audio/audio_command/task1_lns/train_zhvoice_normsound",
+            //     // "/dataset/audio/fqk/zhuanlu1",
+            //     // "/dataset/audio/audio_command/task1_lns/common_voice_normsound",
+            //     // "/dataset/audio/audio_command/task5_lns/yzx/test/test_normsound/",
+
+            //     "/dataset/audio/audio_command/task_hi_smart/背景音_width2s/train_class0",
+            //     "/dataset/audio/audio_command/task_hi_smart/yzx/group_train_0.3/1m",
+            //     "/dataset/audio/audio_command/task_hi_smart/yzx/group_train_0.3/3m",
+            //     "/dataset/audio/audio_command/task_hi_smart/yzx/group_train_0.3/5m",
+
+
+            //     // "/dataset/audio/audio_command/task1_lns/test_normsound",
+            //     // "/dataset/audio/audio_command/task1_lns/test4_1m_normsound",
+            //     // "datasets/speech_commands/test",
+            //     // "test_data",
+
+
+            //     "--valid-dataset",
+            //     // "datasets/speech_commands/valid",
+
+            //     "/dataset/audio/audio_command/task5_lns/yzx/test/test_normsound",
+            //     "/dataset/audio/audio_command/task5_lns/yzx/test/1m_normsound",
+            //     "/dataset/audio/audio_command/task5_lns/yzx/test/3m_normsound",
+            //     "/dataset/audio/audio_command/task5_lns/yzx/test/5m_normsound",
+
+            //     // "datasets/speech_commands/test",
+            //     // "test_data",
+
+            //     "--background-noise",
+            //     "/dataset/audio/audio_command/task_hi_smart/背景音_width2s/train_class0",
+            //     // "datasets/speech_commands/train/_background_noise_",
+
+            //     // "/dataset/audio/audio_command/collection_data/negative_sample_1226_linrui_cropped_normsound",
+
+            //     "--pretrain", 
+            //     "out/v9/best-acc-0.944-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch79.pth",
+
+            //     "--model",                 "cnn10",
+            //     "--optim",                 "sgd",
+            //     "--lr-scheduler",          "plateau",
+            //     "--learning-rate",         "0.000",
+            //     "--lr-scheduler-patience", "5",
+            //     "--max-epochs",            "35",
+            //     "--batch-size",            "64",
+            //     "--input",                 "40",
+
+            //     "--save-path",              "out/debug",
+            //     "--dataload-workers-nums", "1"
+
+
+            // ]
+
+            // eval
+
+            // "args": [
+
+            //     //xiaoai
+            //     // "out/v16/last-speech-commands-checkpoint.pth",
+            //     // "out/v23_add_pcen_deploy_param/best-acc-0.948-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch22.pth",
+
+            //     //shiyun
+            //     // "out/shiyun_v3/best-acc-0.922-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch22.pth",
+            //     // "out/shiyun_v2_add_common_voice/best-acc-0.870-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch43.pth",
+            //     // "out/shiyun_v5/best-acc-0.952-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch91.pth",
+            //     // "out/shiyun_v4/best-acc-0.928-cnn10_sgd_plateau_bs256_lr1.0e-03_wd1.0e-02-epoch1.pth",
+
+            //     //hi smart
+            //     // "/home/xueting.ma/语音数据的处理/pytorch-speech-commands/results/speech_command_hismart_turnon_shutdown/hismart_turnon_shutdown_class0intrainandval_trans_again_addtrain_去除训练集中的5m转录_再去除3m5m中的turnon转录_训练集中添加0类背景音/best-acc-0.923-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch0.pth",
+            //     // "out/hi_smart_v5/best-acc-0.937-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch2.pth",
+            //     // "out/hi_smart_v6/best-acc-0.905-cnn10_sgd_plateau_bs64_lr1.0e-05_wd1.0e-02-epoch12.pth",
+
+            //     // "out/hi_smart_v6/best-acc-0.889-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch11.pth",
+            //     // "out/hi_smart_v6/best-acc-0.905-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch14.pth",
+            //     "out/hi_smart_v9/best-acc-0.909-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch6.pth",
+            //     // "out/hi_smart_v11/best-acc-0.885-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch7.pth",
+            //     // "out/hi_smart_v12/best-acc-0.921-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch6.pth",
+
+            //     // "out/hi_smart_v2/best-acc-0.958-cnn10_sgd_plateau_bs256_lr1.0e-03_wd1.0e-02-epoch12.pth",
+
+            //     "cnn10",   "--input",    "mel40",
+
+
+            //     // "--background-noise",
+            //     // "/dataset/audio/audio_command/collection_data/negative_sample_1226_linrui_cropped_normsound",
+
+            //     "--dataset-dir",
+
+            //     //hi smart
+
+            //     // "/dataset/audio/audio_command/task_hi_smart/gen_commands_pad/inside_3s_8k",
+            //     // "/dataset/audio/audio_command/task_hi_smart/sentence_of_article_train",
+            //     // "/dataset/audio/audio_command/task_hi_smart/sppech_commands_neg",
+            //     // "/dataset/audio/audio_command/task_hi_smart/commands_after_trans/1m",
+            //     // "/dataset/audio/audio_command/task_hi_smart/commands_after_trans/3m",
+            //     // "/dataset/audio/audio_command/task_hi_smart/commands_after_trans/5m",
+            //     // "/dataset/audio/audio_command/task_hi_smart/背景音_width2s/train_class0",
+                
+
+            //     "/dataset/audio/audio_command/task_hi_smart/office_bg/test",
+            //     // "/dataset/audio/audio_command/task_hi_smart/yzx/sentence_of_article_val/1m",
+            //     // "/dataset/audio/audio_command/task_hi_smart/yzx/sentence_of_article_val/3m",
+            //     // "/dataset/audio/audio_command/task_hi_smart/yzx/sentence_of_article_val/5m",
+            //     // "/dataset/audio/audio_command/task_hi_smart/yzx/speech_command_val",
+
+            //     "/dataset/audio/audio_command/task_hi_smart/yzx/group_val_0.7/1m",
+            //     "/dataset/audio/audio_command/task_hi_smart/yzx/group_val_0.7/3m",
+            //     "/dataset/audio/audio_command/task_hi_smart/yzx/group_val_0.7/5m",
+
+
+                // "/home/xueting.ma/语音数据的处理/自己采集的音频/代码生成的val指令_转录后分割/1m",
+                // "/home/xueting.ma/语音数据的处理/自己采集的音频/代码生成的val指令_转录后分割/3m",
+                // "/home/xueting.ma/语音数据的处理/自己采集的音频/代码生成的val指令_转录后分割/5m",                
+
+
+                // "/home/xueting.ma/语音数据的处理/自己采集的音频/组员录音_重切_重命名_标准化/1m",
+                // "/home/xueting.ma/语音数据的处理/自己采集的音频/组员录音_重切_重命名_标准化/3m",
+                // "/home/xueting.ma/语音数据的处理/自己采集的音频/组员录音_重切_重命名_标准化/5m",
+
+                
+                // "/dataset/audio/audio_command/task_hi_smart/speech_command_val_8k",
+                // "/dataset/audio/audio_command/task_hi_smart/sentence_of_article_8k/1m",
+                // "/dataset/audio/audio_command/task_hi_smart/sentence_of_article_8k/3m",
+                // "/dataset/audio/audio_command/task_hi_smart/sentence_of_article_8k/5m",
+
+
+                //shiyun
+                // "/dataset/audio/audio_command/task5_lns/train_older_normsound",
+
+                // "/dataset/audio/audio_command/task5_lns/yzx/test/test_normsound",
+                // "/dataset/audio/audio_command/task5_lns/yzx/test/1m_normsound",
+                // "/dataset/audio/audio_command/task5_lns/yzx/test/3m_normsound",
+                // "/dataset/audio/audio_command/task5_lns/yzx/test/5m_normsound",
+
+                // "/home/weiwei.dong/FullSubNet/recipes/dns_interspeech_2020/output_1/test_normsound",
+                // "/home/weiwei.dong/FullSubNet/recipes/dns_interspeech_2020/output_1/1m_normsound",
+                // "/home/weiwei.dong/FullSubNet/recipes/dns_interspeech_2020/output_1/3m_normsound",
+                // "/home/weiwei.dong/FullSubNet/recipes/dns_interspeech_2020/output_1/5m_normsound",
+
+                // "/dataset/audio/audio_command/task5_lns/test_normsound",
+                // "/dataset/audio/audio_command/task5_lns/test4_1m_normsound_single_boda",
+                // "/dataset/audio/audio_command/task5_lns/test4_3m_normsound_single_boda",
+                // "/dataset/audio/audio_command/task5_lns/test4_5m_normsound_single_boda",
+
+                //xiaoai
+                // "/dataset/audio/audio_command/task1_lns/yzx/test/0.5m",
+                // "/dataset/audio/audio_command/task1_lns/yzx/test/1m",
+                // "/dataset/audio/audio_command/task1_lns/yzx/test/3m",
+                // "/dataset/audio/audio_command/task1_lns/yzx/test/5m",
+
+                // "/dataset/audio/audio_command/task1_lns/yzx/test/neg",
+
+                // "/dataset/audio/audio_command/task1_lns/yzx/order"
+
+
+                // "/dataset/audio/audio_command/task1_lns/test_normsound",
+                // "/dataset/audio/audio_command/task1_lns/test4_1m_normsound",   
+                // "/dataset/audio/audio_command/task1_lns/test4_3m_normsound",   
+                // "/dataset/audio/audio_command/task1_lns/test4_5m_normsound",   
+
+                // "/dataset/audio/audio_command/task1_lns/test_normsound_center",
+                // "/dataset/audio/audio_command/task1_lns/test4_1m_normsound_center",   
+                // "/dataset/audio/audio_command/task1_lns/test4_3m_normsound_center",   
+                // "/dataset/audio/audio_command/task1_lns/test4_5m_normsound_center", 
+
+                // "/dataset/audio/audio_command/task1_lns/train_yourTTS",
+
+                // "tmp_test"
+
+                // "/dataset/audio/audio_command/task1_lns/train_mix_2_normsound",
+                // "/dataset/audio/audio_command/task1_lns/train_collection_zhuanlu_normsound",
+                // "/dataset/audio/audio_command/task1_lns/train_zhvoice_normsound",
+                // "/dataset/audio/fqk/zhuanlu1",                
+                
+
+
+            // ]
+
+
+            // // onnx export
+            // "args": [
+
+            //     // "out/shiyun_v5/best-acc-0.952-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch91.pth",
+            //     // "out/v23_add_pcen_deploy_param/best-acc-0.948-cnn10_sgd_plateau_bs256_lr1.0e-02_wd1.0e-02-epoch22.pth",
+
+            //     // "out/hi_smart_v6/best-acc-0.905-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch14.pth",
+            //     "out/hi_smart_v12/best-acc-0.921-cnn10_sgd_plateau_bs64_lr1.0e-04_wd1.0e-02-epoch6.pth",
+            //     "cnn10",
+            // ]
+
+            // feature2npy
+            // "args": [
+            //     "--output",
+            //     // "/home/zhenxing.ye/work/convert_model/audio_cls/images_nihaoshiyun",
+            //     // "/home/zhenxing.ye/work/convert_model/audio_cls/images_xiaoaixiaoai_pcen",
+            //     "/home/zhenxing.ye/work/convert_model/audio_cls/images_hi_smart_pcen",
+
+
+            //     // "--pcen", "1"
+            // ]
+
+
+            //convert_npy_to_bin
+
+            "args": [
+
+                // "--root", "/dataset/audio/audio_command/task1_lns/yzx/test/5m",
+                // "--save_dir", "/dataset/audio/audio_command/task1_lns/yzx/bin/5m"
+
+                // "--root",     "/dataset/audio/audio_command/task5_lns/yzx/test/5m_normsound",
+                // "--save_dir", "/dataset/audio/audio_command/task5_lns/yzx/bin/5m_normsound"
+
+                "--root",     "/dataset/audio/audio_command/task_hi_smart/office_bg/test",
+                "--save_dir", "/dataset/audio/audio_command/task_hi_smart/yzx/test_bin/bg"
+
+
+
+                
+            ]
+
+
+        }
+    ]
+}
